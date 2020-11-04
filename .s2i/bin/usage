@@ -1,0 +1,10 @@
+#!/bin/bash -e
+cat <<EOF
+This is test build image for S2I image:
+To use it, install S2I: https://github.com/openshift/source-to-image
+Sample invocation:
+s2i build quay.io/snir/builds hello-c-app
+You can then run the resulting image via:
+docker run -d -p 8080:8080 hello-c-app
+and see the test via http://localhost:8080
+EOF
